@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NEXUS CARGO JAPAN | 単身ミニ引越しサービス</title>
+<meta name="description" content="面倒な見積もり不要。必要な分だけ、スマートに引越し。単身者向けミニ引越しサービス NEXUS CARGO JAPAN。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#ffffff;
+    --bg:#fafafa;
+    --silver-50:#f4f4f6;
+    --silver-100:#eaeaed;
+    --silver-200:#dcdde1;
+    --silver-300:#c6c8ce;
+    --silver-400:#a7a9b1;
+    --ink:#131316;
+    --ink-soft:#57585f;
+    --ink-faint:#8b8c93;
+    --line:#e2e3e7;
+    --line-brand:#06c755;
+    --line-brand-dark:#04a648;
+    --radius:18px;
+    --radius-sm:10px;
+    --shadow-soft:0 1px 2px rgba(20,20,25,0.04), 0 8px 24px rgba(20,20,25,0.05);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{overflow-x:hidden;max-width:100%;}
+  body{
+    margin:0;
+    font-family:"Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.75;
+    letter-spacing:0.01em;
+    word-break:normal;
+    overflow-wrap:break-word;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  .num{font-family:"Inter",sans-serif;font-variant-numeric:tabular-nums;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(250,250,250,0.86);
+    backdrop-filter:saturate(180%) blur(14px);
+    -webkit-backdrop-filter:saturate(180%) blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .brand{display:flex;align-items:center;gap:10px;min-width:0;}
+  .mark{
+    width:36px;height:36px;flex:none;border-radius:10px;
+    background:#ffffff;
+    border:2px solid #0a0a0c;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .mark svg{width:20px;height:20px;}
+  .logo{font-weight:800;font-size:19px;letter-spacing:0.04em;color:var(--ink);white-space:nowrap;}
+  .logo small{display:block;font-family:"Inter",sans-serif;font-weight:500;font-size:9px;letter-spacing:0.32em;color:var(--ink-faint);margin-top:1px;}
+  @media(max-width:380px){.logo{font-size:16px;} .mark{width:30px;height:30px;border-radius:8px;} .mark svg{width:17px;height:17px;}}
+  .nav-links{display:flex;gap:32px;align-items:center;}
+  .nav-links a{font-size:13.5px;color:var(--ink-soft);font-weight:500;transition:color .2s;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-cta{
+    background:var(--line-brand);color:#fff;padding:9px 20px;border-radius:100px;
+    font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;
+    box-shadow:0 4px 14px rgba(6,199,85,0.28);transition:transform .15s, box-shadow .15s;
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(6,199,85,0.36);}
+  @media(max-width:860px){.nav-links a:not(.nav-cta){display:none;}}
+  @media(max-width:400px){
+    .nav-inner{padding:14px 16px;}
+    .nav-cta{padding:8px 14px;font-size:11.5px;}
+    .logo small{display:none;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:88px 0 64px;text-align:center;position:relative;overflow:hidden;}
+  .hero-brand{display:flex;justify-content:center;margin-bottom:32px;}
+  .logo-square{
+    width:212px;height:212px;flex:none;
+    background:#ffffff;
+    border:3px solid #0a0a0c;
+    border-radius:34px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:14px;padding:18px;
+  }
+  .logo-square svg{width:78px;height:78px;}
+  .logo-square .lc-title{font-weight:800;font-size:22px;letter-spacing:0.02em;color:#0a0a0c;line-height:1;white-space:nowrap;}
+  .logo-square .lc-tag{
+    display:flex;align-items:center;gap:10px;
+    font-family:"Noto Sans JP",sans-serif;font-size:11px;font-weight:700;color:var(--ink-faint);
+    letter-spacing:0.2em;white-space:nowrap;
+  }
+  .logo-square .lc-tag::before,.logo-square .lc-tag::after{content:"";width:14px;height:1px;background:var(--silver-300);}
+  @media(max-width:480px){
+    .logo-square{width:168px;height:168px;border-radius:28px;border-width:2.5px;padding:14px;gap:10px;}
+    .logo-square svg{width:62px;height:62px;}
+    .logo-square .lc-title{font-size:18px;}
+    .logo-square .lc-tag{font-size:9.5px;}
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;
+    color:var(--ink-faint);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:26px;
+    font-family:"Inter",sans-serif;
+  }
+  .eyebrow::before,.eyebrow::after{content:"";width:22px;height:1px;background:var(--silver-300);}
+  .hero h1{
+    font-size:clamp(28px,5vw,48px);font-weight:800;letter-spacing:-0.01em;
+    line-height:1.5;margin:0 auto 22px;max-width:640px;color:var(--ink);
+  }
+  .hero h1 .line{display:block;}
+  .hero h1 .line.strong{font-weight:800;}
+  .hero p.lead{
+    font-size:16px;color:var(--ink-soft);max-width:480px;margin:0 auto 40px;font-weight:500;
+  }
+  .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:70px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 30px;border-radius:100px;font-size:14.5px;font-weight:700;border:1px solid transparent;
+    transition:transform .15s, box-shadow .15s, background .15s;
+  }
+  .btn-primary{background:var(--line-brand);color:#fff;box-shadow:0 6px 18px rgba(6,199,85,0.28);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(6,199,85,0.36);}
+  .btn-secondary{background:var(--white);color:var(--ink);border-color:var(--silver-200);}
+  .btn-secondary:hover{border-color:var(--ink);}
+
+  /* route signature element */
+  .route{max-width:640px;margin:0 auto;position:relative;height:64px;}
+  .route-line{position:absolute;top:50%;left:6%;right:6%;height:1px;background:repeating-linear-gradient(90deg,var(--silver-300) 0 6px, transparent 6px 12px);}
+  .route-pt{position:absolute;top:50%;transform:translate(-50%,-50%);width:9px;height:9px;border-radius:50%;background:var(--ink);}
+  .route-pt.a{left:6%;}
+  .route-pt.b{left:94%;background:var(--silver-400);}
+  .route-label{position:absolute;top:calc(50% + 14px);font-size:11px;color:var(--ink-faint);font-family:"Inter",sans-serif;letter-spacing:0.05em;white-space:nowrap;max-width:44%;}
+  .route-label.a{left:6%;text-align:left;}
+  .route-label.b{right:6%;text-align:right;}
+  .route-van{
+    position:absolute;top:50%;left:6%;transform:translate(-50%,-50%);
+    width:26px;height:26px;border-radius:50%;background:var(--white);border:1px solid var(--silver-200);
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-soft);
+    animation:travel 7s ease-in-out infinite;
+  }
+  @keyframes travel{
+    0%,8%{left:6%;}
+    45%,55%{left:50%;}
+    92%,100%{left:94%;}
+  }
+  @media (prefers-reduced-motion: reduce){.route-van{animation:none;left:50%;}}
+  .route-van svg{width:14px;height:14px;}
+
+  /* ---------- SECTION shell ---------- */
+  section[id]{scroll-margin-top:88px;}
+  section{padding:96px 0;}
+  @media(max-width:640px){section{padding:64px 0;}}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 56px;}
+  .kicker{font-family:"Inter",sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;color:var(--ink-faint);text-transform:uppercase;margin-bottom:14px;}
+  .section-head h2{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-0.01em;margin:0 0 14px;}
+  .section-head p{color:var(--ink-soft);font-size:15px;margin:0;}
+  .alt-bg{background:var(--silver-50);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+
+  /* ---------- CONCEPT ---------- */
+  .concept{text-align:center;}
+  .concept .tag{font-size:13px;font-weight:700;color:var(--ink-faint);letter-spacing:0.1em;margin-bottom:18px;}
+  .concept h2{font-size:clamp(22px,3.2vw,30px);font-weight:700;line-height:1.9;margin:0 0 40px;}
+  .concept-flow{display:flex;justify-content:center;gap:0;flex-wrap:wrap;max-width:760px;margin:0 auto;}
+  .concept-step{flex:1;min-width:150px;padding:20px 16px;}
+  .concept-step .n{font-family:"Inter",sans-serif;font-size:11px;color:var(--silver-400);font-weight:700;margin-bottom:10px;}
+  .concept-step p{margin:0;font-weight:600;font-size:14.5px;}
+  .concept-arrow{display:flex;align-items:center;color:var(--silver-300);padding:0 4px;}
+  @media(max-width:640px){.concept-arrow{transform:rotate(90deg);}}
+
+  /* ---------- REASONS ---------- */
+  .reasons-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  @media(max-width:720px){.reasons-grid{grid-template-columns:1fr;}}
+  .reason-card{background:var(--white);padding:40px 36px;}
+  .reason-card .ic{width:44px;height:44px;border-radius:12px;background:var(--silver-50);border:1px solid var(--silver-100);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+  .reason-card .ic svg{width:22px;height:22px;stroke:var(--ink);}
+  .reason-card h3{font-size:16.5px;font-weight:700;margin:0 0 10px;}
+  .reason-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+
+  /* ---------- BOX EXPLAINER ---------- */
+  .box-explain{background:var(--silver-50);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .box-explain-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
+  @media(max-width:860px){.box-explain-grid{grid-template-columns:1fr;gap:36px;}}
+  .box-explain-text .kicker{margin-bottom:14px;}
+  .box-explain-text h2{font-size:clamp(22px,3.2vw,30px);font-weight:800;letter-spacing:-0.01em;margin:0 0 18px;line-height:1.5;}
+  .box-explain-text p{font-size:14.5px;color:var(--ink-soft);margin:0 0 16px;}
+  .box-explain-points{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:14px;}
+  .box-explain-points li{display:flex;gap:12px;font-size:13.5px;color:var(--ink-soft);align-items:flex-start;}
+  .box-explain-points .chk{flex:none;width:20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:1px;}
+
+  .diagram-card{
+    background:#fff;border:1px solid var(--silver-200);border-radius:24px;padding:28px;
+    box-shadow:var(--shadow-soft);position:relative;overflow:hidden;
+  }
+  .diagram-card svg{width:100%;height:auto;display:block;}
+  .diagram-caption{display:flex;justify-content:space-between;align-items:center;margin-top:18px;flex-wrap:wrap;gap:8px;}
+  .diagram-caption .lab{font-size:11.5px;color:var(--ink-faint);}
+  .diagram-caption .badge2{font-size:11px;font-weight:700;background:var(--silver-50);border:1px solid var(--silver-200);padding:5px 12px;border-radius:100px;}
+  @media(max-width:420px){.diagram-card{padding:18px;border-radius:18px;}}
+
+  /* ---------- PRICING ---------- */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:900px){.plans{grid-template-columns:1fr;max-width:420px;margin:0 auto;}}
+  .plan{
+    background:var(--white);border:1px solid var(--silver-200);border-radius:var(--radius);
+    padding:34px 30px;position:relative;display:flex;flex-direction:column;
+  }
+  .plan.hi{border-color:var(--ink);box-shadow:0 14px 34px rgba(20,20,25,0.10);transform:translateY(-6px);}
+  @media(max-width:900px){.plan.hi{transform:none;}}
+  .plan-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:0.05em;}
+  .plan-icon{font-size:22px;margin-bottom:14px;}
+  .plan h3{font-size:15px;font-weight:700;margin:0 0 4px;color:var(--ink-soft);}
+  .plan .price{font-family:"Inter",sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.01em;margin:2px 0 4px;}
+  .plan .price span{font-size:14px;font-weight:500;color:var(--ink-faint);}
+  .plan .tax{font-size:11.5px;color:var(--ink-faint);margin-bottom:20px;}
+  .plan .meya{background:var(--silver-50);border-radius:var(--radius-sm);padding:14px 16px;font-size:13px;color:var(--ink-soft);margin-bottom:20px;line-height:1.6;}
+  .plan .grp-label{font-size:11.5px;font-weight:700;color:var(--ink-faint);letter-spacing:0.06em;margin:0 0 8px;}
+  .plan ul{list-style:none;margin:0 0 20px;padding:0;font-size:13.5px;color:var(--ink-soft);}
+  .plan ul li{padding:5px 0;border-bottom:1px dashed var(--silver-200);}
+  .plan ul li:last-child{border-bottom:none;}
+  .plan .osusume{margin-top:auto;font-size:12.5px;color:var(--ink-faint);}
+
+  .note-box{
+    margin-top:44px;background:var(--white);border:1px solid var(--silver-200);border-radius:var(--radius);
+    padding:30px 34px;
+  }
+  @media(max-width:480px){.note-box{padding:22px 20px;}}
+  .note-box h4{margin:0 0 12px;font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  .note-box p{font-size:13.5px;color:var(--ink-soft);margin:0 0 12px;}
+  .note-box ul{margin:0 0 14px;padding-left:20px;font-size:13.5px;color:var(--ink-soft);}
+  .note-box .warn{font-size:13px;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:14px;margin-top:14px;}
+
+  /* ---------- PAYMENT ---------- */
+  .pay-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:start;}
+  @media(max-width:800px){.pay-grid{grid-template-columns:1fr;}}
+  .pay-flow{display:flex;flex-direction:column;gap:0;}
+  .pay-option{display:flex;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);}
+  .pay-option:last-child{border-bottom:none;}
+  .pay-option .dot{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--ink);flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;font-family:"Inter",sans-serif;}
+  .pay-option h4{margin:0 0 4px;font-size:15px;font-weight:700;}
+  .pay-option p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+  .pay-methods{background:var(--white);border:1px solid var(--silver-200);border-radius:var(--radius);padding:30px;}
+  .pay-methods h4{margin:0 0 18px;font-size:14px;font-weight:700;color:var(--ink-faint);letter-spacing:0.04em;}
+  .pm-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);}
+  .pm-row:last-child{border-bottom:none;}
+  .pm-row .pm-ic{width:38px;height:38px;border-radius:10px;background:var(--silver-50);display:flex;align-items:center;justify-content:center;font-size:17px;flex:none;}
+  .pm-row div p{margin:0;font-size:13.5px;font-weight:600;}
+  .pm-row div span{font-size:11.5px;color:var(--ink-faint);}
+
+  /* ---------- LINE CTA BAND ---------- */
+  .cta-band{background:var(--ink);color:#fff;text-align:center;padding:70px 24px;border-radius:28px;max-width:var(--maxw);margin:0 auto;}
+  .cta-band h2{font-size:clamp(20px,3vw,28px);font-weight:800;margin:0 0 10px;}
+  .cta-band p{color:#b9bac0;font-size:14px;margin:0 0 30px;}
+  .cta-band .flow-mini{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-bottom:34px;font-size:12px;color:#9c9da3;font-family:"Inter",sans-serif;}
+  .cta-band .flow-mini span{background:#212226;padding:6px 12px;border-radius:100px;}
+
+  /* ---------- BOOKING SYSTEM ---------- */
+  .booking-panel{background:var(--white);border:1px solid var(--silver-200);border-radius:24px;padding:40px;box-shadow:var(--shadow-soft);}
+  @media(max-width:640px){.booking-panel{padding:24px 18px;}}
+  .bk-steps{display:flex;gap:8px;margin-bottom:34px;flex-wrap:wrap;}
+  .bk-step{flex:1;min-width:100px;text-align:center;padding:10px 6px;border-radius:10px;background:var(--silver-50);font-size:12px;font-weight:700;color:var(--ink-faint);position:relative;}
+  .bk-step.active{background:var(--ink);color:#fff;}
+  .bk-step.done{background:var(--silver-100);color:var(--ink-soft);}
+
+  .bk-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+  .bk-cal-head h4{margin:0;font-size:15px;font-weight:700;}
+  .bk-cal-nav{display:flex;gap:6px;}
+  .bk-cal-nav button{width:32px;height:32px;border-radius:50%;border:1px solid var(--silver-200);background:#fff;display:flex;align-items:center;justify-content:center;}
+  .bk-cal-nav button:disabled{opacity:0.3;cursor:not-allowed;}
+  .bk-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:10px;}
+  .bk-dow{text-align:center;font-size:11px;color:var(--ink-faint);font-weight:700;padding-bottom:4px;font-family:"Inter",sans-serif;}
+  .bk-day{
+    aspect-ratio:1;border-radius:10px;border:1px solid var(--silver-100);background:var(--silver-50);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:13px;color:var(--silver-400);
+    font-family:"Inter",sans-serif;font-weight:600;position:relative;
+  }
+  .bk-day.empty{border:none;background:none;}
+  .bk-day.open{background:#fff;color:var(--ink);border-color:var(--silver-200);cursor:pointer;transition:all .15s;}
+  .bk-day.open:hover{border-color:var(--ink);transform:translateY(-1px);}
+  .bk-day.open::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--line-brand);position:absolute;bottom:6px;}
+  .bk-day.selected{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .bk-day.selected::after{background:#fff;}
+  .bk-day.past{opacity:0.35;}
+
+  .bk-slots{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px;}
+  .bk-slot{padding:11px 18px;border-radius:100px;border:1px solid var(--silver-200);background:#fff;font-size:13.5px;font-weight:600;transition:all .15s;}
+  .bk-slot:hover{border-color:var(--ink);}
+  .bk-slot.selected{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+  .bk-toggle-row{display:flex;gap:12px;margin-top:18px;}
+  .bk-toggle{flex:1;padding:16px;border-radius:14px;border:1px solid var(--silver-200);background:#fff;text-align:left;transition:all .15s;}
+  .bk-toggle b{display:block;font-size:14px;margin-bottom:3px;}
+  .bk-toggle span{font-size:12px;color:var(--ink-faint);}
+  .bk-toggle.selected{border-color:var(--ink);background:var(--silver-50);}
+
+  .bk-summary{background:var(--silver-50);border-radius:16px;padding:22px 24px;margin-top:28px;font-size:13.5px;}
+  .bk-summary .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--silver-200);}
+  .bk-summary .row:last-child{border-bottom:none;}
+  .bk-summary .row .k{color:var(--ink-faint);}
+  .bk-summary .row .v{font-weight:700;}
+
+  .bk-actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .bk-actions .btn{flex:1;min-width:180px;}
+  .bk-hint{font-size:12px;color:var(--ink-faint);margin-top:14px;text-align:center;}
+  .bk-empty{text-align:center;padding:30px 10px;color:var(--ink-faint);font-size:13.5px;}
+
+  /* ---------- AREA ---------- */
+  .area-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:720px){.area-grid{grid-template-columns:1fr;}}
+  .area-card{background:var(--white);border:1px solid var(--silver-200);border-radius:var(--radius);padding:32px;}
+  .area-card .lbl{font-size:12px;font-weight:700;color:var(--ink-faint);letter-spacing:0.08em;margin-bottom:14px;}
+  .area-card h3{font-size:16.5px;font-weight:700;margin:0 0 16px;}
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .chip{background:var(--silver-50);border:1px solid var(--silver-100);padding:7px 14px;border-radius:100px;font-size:12.5px;font-weight:600;}
+  .area-card .foot{font-size:12.5px;color:var(--ink-faint);border-top:1px solid var(--line);padding-top:14px;margin-top:6px;}
+
+  /* ---------- FLOW ---------- */
+  .flow-list{max-width:640px;margin:0 auto;}
+  .flow-item{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--line);}
+  .flow-item:last-of-type{border-bottom:none;}
+  .flow-item .fn{font-family:"Inter",sans-serif;font-size:13px;font-weight:700;color:var(--silver-400);width:28px;flex:none;padding-top:2px;}
+  .flow-item h4{margin:0 0 6px;font-size:15px;font-weight:700;}
+  .flow-item p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+  .flow-foot{text-align:center;margin-top:20px;font-size:12.5px;color:var(--ink-faint);}
+
+  /* ---------- TRUST ---------- */
+  .trust-row{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;text-align:center;}
+  .trust-item{max-width:200px;}
+  .trust-item .ic{width:48px;height:48px;border-radius:14px;background:var(--white);border:1px solid var(--silver-200);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+  .trust-item .ic svg{width:22px;height:22px;}
+  .trust-item p{font-size:13px;font-weight:600;margin:0;color:var(--ink-soft);}
+
+  /* ---------- COMPANY / LEGAL ---------- */
+  .kv-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .kv-table tr{border-bottom:1px solid var(--line);}
+  .kv-table tr:last-child{border-bottom:none;}
+  .kv-table th{width:170px;text-align:left;padding:16px 20px 16px 0;color:var(--ink-faint);font-weight:600;vertical-align:top;}
+  .kv-table td{padding:16px 0;color:var(--ink-soft);vertical-align:top;}
+  @media(max-width:600px){.kv-table th{width:110px;font-size:12.5px;padding-right:10px;} .kv-table,.kv-table td{font-size:12.8px;}}
+  .legal-block{margin-bottom:36px;}
+  .legal-block h3{font-size:16px;font-weight:700;margin:0 0 14px;}
+  .legal-block p{font-size:13.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .legal-block ul{margin:0 0 10px;padding-left:20px;font-size:13.5px;color:var(--ink-soft);}
+  .legal-nav{display:flex;gap:10px;justify-content:center;margin-bottom:50px;flex-wrap:wrap;}
+  .legal-nav button{padding:9px 18px;border-radius:100px;border:1px solid var(--silver-200);background:#fff;font-size:13px;font-weight:600;}
+  .legal-nav button.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .legal-panel{display:none;}
+  .legal-panel.active{display:block;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:#c9cacf;padding:64px 0 100px;}
+  .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px;}
+  .foot-logo{color:#fff;font-weight:800;font-size:18px;letter-spacing:0.04em;margin-bottom:10px;}
+  .foot-col p{font-size:12.5px;line-height:1.9;color:#95969d;margin:0;}
+  .foot-links{display:flex;gap:30px;flex-wrap:wrap;}
+  .foot-links a{font-size:13px;color:#c9cacf;}
+  .foot-links a:hover{color:#fff;}
+  .foot-bottom{border-top:1px solid #26272b;padding-top:24px;font-size:11.5px;color:#75767c;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  .admin-link{background:none;border:none;color:#75767c;font-size:11.5px;text-decoration:underline;text-underline-offset:2px;}
+
+  /* ---------- STICKY MOBILE BAR ---------- */
+  .mobile-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:200;
+    background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);padding:12px 18px calc(12px + env(safe-area-inset-bottom));
+    display:none;align-items:center;gap:12px;
+    box-shadow:0 -6px 20px rgba(0,0,0,0.06);
+  }
+  .mobile-bar .txt{flex:1;}
+  .mobile-bar .txt b{display:block;font-size:13px;}
+  .mobile-bar .txt span{font-size:11px;color:var(--ink-faint);}
+  .mobile-bar .btn{padding:11px 20px;font-size:13px;white-space:nowrap;}
+  @media(max-width:720px){
+    .mobile-bar.show{display:flex;}
+    body{padding-bottom:0;}
+  }
+  @media(max-width:360px){
+    .mobile-bar .txt b{font-size:12px;}
+    .mobile-bar .txt span{font-size:10px;}
+    .mobile-bar .btn{padding:10px 16px;font-size:12px;}
+  }
+
+  /* ---------- ADMIN MODAL ---------- */
+  .modal-bg{position:fixed;inset:0;background:rgba(15,15,17,0.55);z-index:500;display:none;align-items:center;justify-content:center;padding:20px;}
+  .modal-bg.show{display:flex;}
+  .modal{background:#fff;border-radius:20px;max-width:560px;width:100%;max-height:86vh;overflow-y:auto;padding:32px;position:relative;}
+  @media(max-width:480px){.modal{padding:24px 18px;border-radius:16px;} .admin-day-row .d{width:76px;font-size:12px;}}
+  .modal h3{margin:0 0 6px;font-size:18px;font-weight:800;}
+  .modal .sub{font-size:12.5px;color:var(--ink-faint);margin:0 0 22px;}
+  .modal-close{position:absolute;top:20px;right:20px;width:32px;height:32px;border-radius:50%;border:1px solid var(--silver-200);background:#fff;font-size:16px;line-height:1;}
+  .admin-day-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+  .admin-day-row .d{width:96px;font-size:13px;font-weight:700;flex:none;}
+  .switch{position:relative;width:40px;height:22px;flex:none;}
+  .switch input{opacity:0;width:0;height:0;}
+  .switch .slider{position:absolute;inset:0;background:var(--silver-200);border-radius:100px;transition:.2s;cursor:pointer;}
+  .switch .slider::before{content:"";position:absolute;width:16px;height:16px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s;}
+  .switch input:checked + .slider{background:var(--line-brand);}
+  .switch input:checked + .slider::before{transform:translateX(18px);}
+  .admin-slot-chips{display:flex;gap:6px;flex-wrap:wrap;}
+  .admin-slot-chip{font-size:11.5px;padding:5px 10px;border-radius:100px;border:1px solid var(--silver-200);background:#fff;}
+  .admin-slot-chip.on{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .admin-okuraki{font-size:11px;color:var(--ink-faint);flex:none;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:12.5px;font-weight:700;margin-bottom:6px;color:var(--ink-soft);}
+  .field input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--silver-200);font-size:14px;font-family:inherit;}
+  .msg{font-size:12.5px;padding:10px 14px;border-radius:10px;margin-top:10px;}
+  .msg.ok{background:#e9f9ee;color:#0a7a3d;}
+  .msg.err{background:#fdecec;color:#b3261e;}
+
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+  :focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 220 175" fill="none" stroke="#0a0a0c" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40,30 L150,30 L150,100"/>
+          <path d="M40,30 L40,140 L58,140"/>
+          <path d="M150,55 L178,55 L200,100 L150,100"/>
+          <circle cx="90" cy="140" r="24"/>
+          <circle cx="178" cy="140" r="24"/>
+        </svg>
+      </span>
+      <div class="logo">NEXUS CARGO<small>JAPAN</small></div>
+    </div>
+    <div class="nav-links">
+      <a href="#plans">料金プラン</a>
+      <a href="#booking">ダンボール予約</a>
+      <a href="#area">対応エリア</a>
+      <a href="#flow">流れ</a>
+      <a class="nav-cta" href="https://lin.ee/wNdTgf5" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 4.36 3.58 8.01 8.42 8.72.33.07.78.22.89.5.1.26.07.66.03.92l-.14.87c-.04.26-.2 1.01.88.55 1.08-.46 5.82-3.43 7.94-5.87C21.54 14.4 22 12.65 22 10.8 22 5.94 17.52 2 12 2z" fill="#fff"/></svg>
+        LINEで予約
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero wrap">
+  <div class="hero-brand">
+    <div class="logo-square" aria-label="NEXUS CARGO スマート引越し">
+      <svg viewBox="0 0 220 175" fill="none" stroke="#0a0a0c" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M40,30 L150,30 L150,100"/>
+        <path d="M40,30 L40,140 L58,140"/>
+        <path d="M150,55 L178,55 L200,100 L150,100"/>
+        <circle cx="90" cy="140" r="24"/>
+        <circle cx="178" cy="140" r="24"/>
+      </svg>
+      <div class="lc-title">NEXUS CARGO</div>
+      <div class="lc-tag">スマート引越し</div>
+    </div>
+  </div>
+  <h1>
+    <span class="line">面倒な見積もり不要。</span>
+    <span class="line">必要な分だけ、</span>
+    <span class="line strong">スマートに引越し。</span>
+  </h1>
+  <p class="lead">忙しい一人暮らしのための、シンプル単身引越し。準備はスキマ時間で、運搬はプロにお任せ。</p>
+  <div class="hero-ctas">
+    <a class="btn btn-primary" href="https://lin.ee/wNdTgf5" target="_blank" rel="noopener">LINEで簡単予約</a>
+    <a class="btn btn-secondary" href="#plans">料金を見る</a>
+  </div>
+  <div class="route" aria-hidden="true">
+    <div class="route-line"></div>
+    <div class="route-pt a"></div>
+    <div class="route-pt b"></div>
+    <div class="route-label a">箱づめ準備</div>
+    <div class="route-label b">新居搬入</div>
+    <div class="route-van">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#131316" stroke-width="1.6"><path d="M3 16V7a1 1 0 011-1h9v10M3 16h1m9 0h4m-4 0V10h3l3 3v3m-3 0a2 2 0 104 0m-4 0a2 2 0 114 0M6 16a2 2 0 104 0 2 2 0 00-4 0"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= CONCEPT ================= -->
+<section class="concept wrap">
+  <div class="tag">CONCEPT</div>
+  <h2>忙しい一人暮らしのための<br>シンプル単身引越し。<br>準備はスキマ時間で。運搬はプロにお任せ。<br>時間も費用もスマートに。</h2>
+  <div class="concept-flow">
+    <div class="concept-step"><div class="n">01</div><p>ダンボールを受け取る</p></div>
+    <div class="concept-arrow">→</div>
+    <div class="concept-step"><div class="n">02</div><p>空いた時間で荷造り</p></div>
+    <div class="concept-arrow">→</div>
+    <div class="concept-step"><div class="n">03</div><p>プロが運搬・搬入</p></div>
+  </div>
+</section>
+
+<!-- ================= REASONS ================= -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Why Nexus Cargo</div>
+      <h2>NEXUS CARGOが選ばれる理由</h2>
+    </div>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M4 8l8-4 8 4-8 4-8-4zm0 0v8l8 4 8-4V8"/></svg></div>
+        <h3>必要な分だけだから低コスト</h3>
+        <p>大きな引越しサービスではなく、荷物量に合わせたシンプルな引越し。</p>
+      </div>
+      <div class="reason-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M12 7v5l3 3M12 21a9 9 0 100-18 9 9 0 000 18z"/></svg></div>
+        <h3>忙しい方でも自分のペースで準備</h3>
+        <p>ダンボールは事前にお届けします。受け取り時間の調整不要。</p>
+      </div>
+      <div class="reason-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h3>「結局いくら？」をなくす</h3>
+        <p>料金がわかる、シンプルな単身引越し。</p>
+      </div>
+      <div class="reason-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M9 12l2 2 4-4M12 21a9 9 0 100-18 9 9 0 000 18z"/></svg></div>
+        <h3>作業完了後のお支払いで安心</h3>
+        <p>料金を確認したうえで、引越し当日の作業完了後にお支払いいただけます。初めてのご利用でも安心です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOX EXPLAINER ================= -->
+<section class="box-explain">
+  <div class="wrap">
+    <div class="box-explain-grid">
+      <div class="box-explain-text">
+        <div class="kicker">Box Size Guide</div>
+        <h2>専用ダンボールで、<br>荷物量をわかりやすく</h2>
+        <p>NEXUS CARGO JAPANでは、一般的な引越し業者のような複雑な荷物確認や訪問見積もりではなく、専用ダンボールを基準にしたシンプルな料金設定を採用しています。</p>
+        <p>「どのくらい荷物が入るかわからない」という不安を解消するため、事前にダンボールをお届けします。届いた箱に収まる量が、そのままご利用プランの目安になります。</p>
+        <ul class="box-explain-points">
+          <li><span class="chk">✓</span>実物を見ながら荷物量を判断できるから安心</li>
+          <li><span class="chk">✓</span>厚さ5mmのしっかりした強化ダンボールを使用</li>
+          <li><span class="chk">✓</span>使わなかった箱は引越し当日に回収</li>
+        </ul>
+      </div>
+
+      <div class="diagram-card">
+        <svg viewBox="0 0 440 360" role="img" aria-labelledby="boxDiagTitle boxDiagDesc">
+          <title id="boxDiagTitle">ダンボールサイズの図解</title>
+          <desc id="boxDiagDesc">専用ダンボールの外形寸法・内寸・厚みを示した図</desc>
+
+          <!-- badge -->
+          <rect x="14" y="16" width="112" height="44" rx="12" fill="#131316"/>
+          <text x="70" y="34" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#ffffff" letter-spacing="0.5">BOX SIZE</text>
+          <text x="70" y="50" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="11" font-weight="700" fill="#ffffff">サイズ目安</text>
+
+          <!-- top face -->
+          <polygon points="120,140 250,140 312,100 182,100" fill="#EADFC7" stroke="#8a7a55" stroke-width="1.2" stroke-linejoin="round"/>
+          <!-- right face -->
+          <polygon points="250,140 312,100 312,240 250,285" fill="#C9B285" stroke="#8a7a55" stroke-width="1.2" stroke-linejoin="round"/>
+          <!-- front face -->
+          <polygon points="120,140 250,140 250,285 120,285" fill="#DEC89C" stroke="#8a7a55" stroke-width="1.2" stroke-linejoin="round"/>
+          <!-- top seam -->
+          <line x1="185" y1="120" x2="185" y2="140" stroke="#8a7a55" stroke-width="1" opacity="0.6"/>
+          <line x1="120" y1="140" x2="182" y2="100" stroke="#8a7a55" stroke-width="1" opacity="0.4"/>
+          <line x1="250" y1="140" x2="312" y2="100" stroke="#8a7a55" stroke-width="1" opacity="0.4"/>
+          <!-- front crease -->
+          <line x1="185" y1="140" x2="185" y2="285" stroke="#8a7a55" stroke-width="1" opacity="0.35"/>
+
+          <!-- width dimension (front bottom) -->
+          <line x1="120" y1="304" x2="250" y2="304" stroke="#57585f" stroke-width="1"/>
+          <line x1="120" y1="298" x2="120" y2="310" stroke="#57585f" stroke-width="1"/>
+          <line x1="250" y1="298" x2="250" y2="310" stroke="#57585f" stroke-width="1"/>
+          <text x="185" y="322" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#131316">500<tspan font-size="10" font-weight="500" fill="#8b8c93">(490)</tspan></text>
+          <text x="185" y="335" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="9.5" fill="#8b8c93">幅（mm）</text>
+
+          <!-- height dimension (left) -->
+          <line x1="98" y1="140" x2="98" y2="285" stroke="#57585f" stroke-width="1"/>
+          <line x1="92" y1="140" x2="104" y2="140" stroke="#57585f" stroke-width="1"/>
+          <line x1="92" y1="285" x2="104" y2="285" stroke="#57585f" stroke-width="1"/>
+          <text x="70" y="208" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#131316" transform="rotate(-90 70 208)">350<tspan font-size="10" font-weight="500" fill="#8b8c93">(340)</tspan></text>
+          <text x="42" y="212" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="9.5" fill="#8b8c93" transform="rotate(-90 42 212)">高さ（mm）</text>
+
+          <!-- depth dimension (top-right) -->
+          <line x1="255" y1="132" x2="317" y2="92" stroke="#57585f" stroke-width="1"/>
+          <text x="356" y="94" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#131316">380<tspan font-size="10" font-weight="500" fill="#8b8c93">(370)</tspan></text>
+          <text x="356" y="107" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="9.5" fill="#8b8c93">奥行（mm）</text>
+
+          <!-- thickness callout -->
+          <circle cx="60" cy="320" r="0" fill="none"/>
+          <g transform="translate(345,235)">
+            <circle r="46" fill="#ffffff" stroke="#dcdde1" stroke-width="1.5"/>
+            <path d="M-24,-6 l8,-10 l8,10 l8,-10 l8,10 l8,-10" fill="none" stroke="#8a7a55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="-26" y1="-14" x2="26" y2="-14" stroke="#c9b285" stroke-width="4"/>
+            <line x1="-26" y1="8" x2="26" y2="8" stroke="#c9b285" stroke-width="4"/>
+            <text y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#131316">5mm</text>
+          </g>
+          <line x1="308" y1="215" x2="330" y2="228" stroke="#c6c8ce" stroke-width="1" stroke-dasharray="2 2"/>
+          <text x="345" y="298" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="9.5" fill="#8b8c93">強化ダンボール厚さ</text>
+
+          <!-- note -->
+          <text x="120" y="352" font-family="Noto Sans JP, sans-serif" font-size="9.5" fill="#a7a9b1">※外形寸法／（　）内は内寸の目安です</text>
+        </svg>
+        <div class="diagram-caption">
+          <span class="lab">※実際のサイズはプランにより異なります</span>
+          <span class="badge2">スタンダードプラン目安</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="plans">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Pricing</div>
+      <h2>単身ミニ引越しサービス料金</h2>
+      <p>荷物量に合わせて、3つのシンプルなプランからお選びいただけます。</p>
+    </div>
+
+    <div class="plans">
+      <div class="plan">
+        <div class="plan-icon">🚚</div>
+        <h3>ライトプラン</h3>
+        <div class="price">19,800<span>円〜</span></div>
+        <div class="tax">目安：ダンボール5箱まで＋大型家電</div>
+        <div class="meya"><b>おすすめ：</b>荷物が少ない一人暮らし／大型家電だけ運びたい方</div>
+        <div class="grp-label">内容</div>
+        <ul><li>ダンボール事前配送</li><li>冷蔵庫</li><li>洗濯機</li><li>テレビ</li><li>その他積載可能な荷物</li></ul>
+      </div>
+
+      <div class="plan hi">
+        <div class="plan-badge">おすすめ</div>
+        <div class="plan-icon">⭐</div>
+        <h3>スタンダードプラン</h3>
+        <div class="price">24,800<span>円〜</span></div>
+        <div class="tax">目安：ダンボール10箱まで＋大型家電</div>
+        <div class="meya"><b>おすすめ：</b>ワンルーム・1Kの一般的な単身引越し</div>
+        <div class="grp-label">内容</div>
+        <ul><li>ダンボール事前配送</li><li>冷蔵庫</li><li>洗濯機</li><li>テレビ</li><li>生活用品一式</li></ul>
+      </div>
+
+      <div class="plan">
+        <div class="plan-icon">🚛</div>
+        <h3>プレミアムプラン</h3>
+        <div class="price">29,800<span>円〜</span></div>
+        <div class="tax">目安：ダンボール11箱以上／積載可能な範囲まで対応</div>
+        <div class="meya"><b>おすすめ：</b>荷物が多めの一人暮らし／1DKなど</div>
+        <div class="grp-label">内容</div>
+        <ul><li>ダンボール事前配送</li><li>冷蔵庫</li><li>洗濯機</li><li>テレビ</li><li>生活用品一式</li><li>積載可能範囲内の荷物</li></ul>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <h4>🧊 大型家電について</h4>
+      <p>冷蔵庫・洗濯機などの大型家電は、サイズや重量により対応できない場合がございます。特に以下の商品は事前確認をお願いいたします。</p>
+      <ul><li>大型冷蔵庫</li><li>ドラム式洗濯機</li><li>大型家具</li><li>重量物</li></ul>
+      <div class="warn">車両への積載が難しい場合は、別途料金での対応またはお引き受けできない場合がございます。事前にLINEで写真をお送りいただければ確認いたします。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAYMENT ================= -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Payment</div>
+      <h2>お支払いについて</h2>
+      <p>お客様に安心してご利用いただくため、お支払いは以下からお選びいただけます。</p>
+    </div>
+    <div class="pay-grid">
+      <div>
+        <div class="pay-flow">
+          <div class="pay-option">
+            <div class="dot num">A</div>
+            <div><h4>事前決済</h4><p>ご予約時にお支払いを完了。当日は作業のみでスムーズです。</p></div>
+          </div>
+          <div class="pay-option">
+            <div class="dot num">B</div>
+            <div><h4>引越し当日の作業完了後決済</h4><p>料金確定後、お客様のご都合に合わせてお選びいただけます。</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="pay-methods">
+        <h4>対応するお支払い方法</h4>
+        <div class="pm-row"><div class="pm-ic">💳</div><div><p>クレジットカード決済</p><span>Visa / Mastercard / JCB / American Express など</span></div></div>
+        <div class="pm-row"><div class="pm-ic">📱</div><div><p>PayPay決済</p><span>アプリでかんたん決済</span></div></div>
+        <div class="pm-row"><div class="pm-ic">🏦</div><div><p>銀行振込</p><span>ご予約確定後、振込先をLINEにてご案内</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LINE CTA ================= -->
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>LINEで簡単予約</h2>
+      <p>下記の情報をお送りいただくだけ。折り返しご案内いたします。</p>
+      <div class="flow-mini">
+        <span>① 引越し希望日</span><span>② 出発地</span><span>③ 到着地</span><span>④ ダンボール配送希望日時</span><span>⑤ 置き配希望の有無</span>
+      </div>
+      <a class="btn btn-primary" href="https://lin.ee/wNdTgf5" target="_blank" rel="noopener" style="background:#fff;color:#131316;">公式LINEを開く</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING SYSTEM ================= -->
+<section id="booking">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Box Delivery Reservation</div>
+      <h2>引越し用ダンボール お届け日時選択</h2>
+      <p>空いている日時からご希望の配送日をお選びください。ご不在時は置き配も選択できます。</p>
+    </div>
+
+    <div class="booking-panel">
+      <div class="bk-steps">
+        <div class="bk-step" data-step="1">1. 日付を選ぶ</div>
+        <div class="bk-step" data-step="2">2. 時間帯を選ぶ</div>
+        <div class="bk-step" data-step="3">3. 置き配の希望</div>
+        <div class="bk-step" data-step="4">4. LINEで送信</div>
+      </div>
+
+      <div class="bk-cal-head">
+        <h4 id="bkMonthLabel">2026年7月</h4>
+        <div class="bk-cal-nav">
+          <button id="bkPrev" aria-label="前の月">‹</button>
+          <button id="bkNext" aria-label="次の月">›</button>
+        </div>
+      </div>
+      <div class="bk-grid" id="bkDow"></div>
+      <div class="bk-grid" id="bkGrid"></div>
+
+      <div id="bkSlotArea" style="display:none;">
+        <div class="bk-cal-head" style="margin-top:24px;"><h4>希望の時間帯</h4></div>
+        <div class="bk-slots" id="bkSlots"></div>
+      </div>
+
+      <div id="bkOkuArea" style="display:none;">
+        <div class="bk-cal-head" style="margin-top:10px;"><h4>ご不在の場合、置き配は可能ですか？</h4></div>
+        <div class="bk-toggle-row">
+          <button class="bk-toggle" data-oku="yes"><b>🏠 置き配を希望する</b><span>玄関前などに配送物を置いてもらう</span></button>
+          <button class="bk-toggle" data-oku="no"><b>🤝 対面で受け取る</b><span>在宅して直接受け取る</span></button>
+        </div>
+      </div>
+
+      <div class="bk-summary" id="bkSummary" style="display:none;">
+        <div class="row"><span class="k">配送希望日</span><span class="v" id="sumDate">—</span></div>
+        <div class="row"><span class="k">時間帯</span><span class="v" id="sumSlot">—</span></div>
+        <div class="row"><span class="k">置き配</span><span class="v" id="sumOku">—</span></div>
+      </div>
+
+      <div class="bk-actions" id="bkActions" style="display:none;">
+        <button class="btn btn-secondary" id="bkReset">選び直す</button>
+        <a class="btn btn-primary" id="bkLineBtn" href="https://lin.ee/wNdTgf5" target="_blank" rel="noopener">この内容でLINEへ送る</a>
+      </div>
+      <p class="bk-hint">ボタンを押すと予約内容がコピーされます。開いたLINEのトーク画面に貼り付けて送信してください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AREA ================= -->
+<section id="area" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Service Area</div>
+      <h2>対応エリア</h2>
+    </div>
+    <div class="area-grid">
+      <div class="area-card">
+        <div class="lbl">📍 出発地（お荷物のお預かり）</div>
+        <h3>以下のエリアから受付しております</h3>
+        <div class="chip-row">
+          <span class="chip">大田区</span><span class="chip">世田谷区</span><span class="chip">品川区</span>
+          <span class="chip">目黒区</span>
+        </div>
+        <div class="foot">上記以外の地域も対応可能な場合がございます。お気軽にLINEでご相談ください。</div>
+      </div>
+      <div class="area-card">
+        <div class="lbl">🚚 お届け先（引越し先）</div>
+        <h3>東京23区内対応</h3>
+        <div class="chip-row"><span class="chip">東京23区 全域</span></div>
+        <div class="foot">新居のエリアに関わらず、東京23区内であれば配送いたします。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLOW ================= -->
+<section id="flow">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">How It Works</div>
+      <h2>サービスの流れ</h2>
+    </div>
+    <div class="flow-list">
+      <div class="flow-item"><div class="fn num">01</div><div><h4>HP・LINEからお申し込み</h4><p>プランを確認し、LINEから必要事項をお送りください。</p></div></div>
+      <div class="flow-item"><div class="fn num">02</div><div><h4>事前にダンボールをお届け</h4><p>ご希望の日時にダンボールをお届けします。</p></div></div>
+      <div class="flow-item"><div class="fn num">03</div><div><h4>お客様のペースで荷造り</h4><p>スキマ時間を使って、ゆっくり梱包していただけます。</p></div></div>
+      <div class="flow-item"><div class="fn num">04</div><div><h4>引越し当日、荷物を回収・積み込み</h4><p>プロのスタッフが丁寧に運び出します。</p></div></div>
+      <div class="flow-item"><div class="fn num">05</div><div><h4>新居へ配送・搬入</h4><p>新居まで安全に配送・搬入いたします。</p></div></div>
+    </div>
+    <div class="flow-foot">※ 使用しなかったダンボールは回収いたします。</div>
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Trust</div>
+      <h2>安心への取り組み</h2>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#131316" stroke-width="1.6"><path d="M3 16V7a1 1 0 011-1h9v10M3 16h1m9 0h4m-4 0V10h3l3 3v3m-3 0a2 2 0 104 0m-4 0a2 2 0 114 0M6 16a2 2 0 104 0 2 2 0 00-4 0"/></svg></div><p>軽貨物事業者による配送</p></div>
+      <div class="trust-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#131316" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><p>明朗料金</p></div>
+      <div class="trust-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#131316" stroke-width="1.6"><path d="M9 12l2 2 4-4M12 21a9 9 0 100-18 9 9 0 000 18z"/></svg></div><p>LINEで事前確認</p></div>
+      <div class="trust-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#131316" stroke-width="1.6"><path d="M4 8l8-4 8 4-8 4-8-4zm0 0v8l8 4 8-4V8"/></svg></div><p>荷物量に合わせた無駄のないプラン</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPANY / LEGAL ================= -->
+<section id="legal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Company Information</div>
+      <h2>事業概要・各種規約</h2>
+    </div>
+
+    <div class="legal-nav">
+      <button data-panel="company">事業概要</button>
+      <button class="active" data-panel="privacy">プライバシーポリシー</button>
+      <button data-panel="tokusho">特定商取引法に基づく表記</button>
+    </div>
+
+    <div class="legal-panel" id="panel-company">
+      <table class="kv-table">
+        <tr><th>屋号</th><td>NEXUS CARGO JAPAN</td></tr>
+        <tr><th>代表者</th><td>久道 修一</td></tr>
+        <tr><th>事業内容</th><td>軽貨物配送・単身引越しサービス</td></tr>
+        <tr><th>サービス内容</th><td>単身者向けのミニ引越しサービス／引越し用ダンボールの事前配送および荷物の運搬</td></tr>
+        <tr><th>対応エリア</th><td>東京都23区</td></tr>
+        <tr><th>メール</th><td>nexuscargojapan@gmail.com</td></tr>
+        <tr><th>LINE</th><td>公式LINEアカウント（<a href="https://lin.ee/wNdTgf5" target="_blank" rel="noopener" style="text-decoration:underline;">https://lin.ee/wNdTgf5</a>）</td></tr>
+      </table>
+    </div>
+
+    <div class="legal-panel active" id="panel-privacy">
+      <div class="legal-block">
+        <p>NEXUS CARGO JAPAN（以下「当サービス」といいます）は、お客様の個人情報を適切に取り扱います。</p>
+      </div>
+      <div class="legal-block">
+        <h3>■取得する情報</h3>
+        <p>お問い合わせやサービス利用時に、以下の情報を取得する場合があります。</p>
+        <ul><li>氏名</li><li>住所</li><li>電話番号</li><li>メールアドレス</li><li>引越しに関する情報</li></ul>
+      </div>
+      <div class="legal-block">
+        <h3>■利用目的</h3>
+        <p>取得した個人情報は、以下の目的で利用します。</p>
+        <ul><li>サービス提供のため</li><li>お問い合わせ対応のため</li><li>予約確認や連絡のため</li><li>サービス改善のため</li></ul>
+      </div>
+      <div class="legal-block">
+        <h3>■個人情報の管理</h3>
+        <p>取得した個人情報について、適切な管理を行い、第三者への提供は法令に基づく場合を除き行いません。</p>
+      </div>
+      <div class="legal-block">
+        <h3>■お問い合わせ</h3>
+        <p>個人情報の取り扱いに関するお問い合わせは、以下までお願いいたします。</p>
+        <p>NEXUS CARGO JAPAN　メール：nexuscargojapan@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="legal-panel" id="panel-tokusho">
+      <table class="kv-table">
+        <tr><th>販売事業者名</th><td>NEXUS CARGO JAPAN</td></tr>
+        <tr><th>代表者</th><td>久道 修一</td></tr>
+        <tr><th>所在地</th><td>請求があった場合、遅滞なく開示いたします。</td></tr>
+        <tr><th>電話番号</th><td>請求があった場合、遅滞なく開示いたします。</td></tr>
+        <tr><th>販売価格</th><td>各サービスページに表示しております。</td></tr>
+        <tr><th>お支払い時期</th><td>サービス提供後、作業完了時にお支払いいただきます。</td></tr>
+        <tr><th>サービス提供時期</th><td>ご予約いただいた日時にサービスを提供いたします。</td></tr>
+        <tr><th>キャンセルについて</th><td>キャンセルの場合は、事前にLINEまたはメールにてご連絡ください。キャンセル時期により、キャンセル料が発生する場合があります。</td></tr>
+        <tr><th>返品・返金について</th><td>サービスの性質上、提供後の返品はできません。</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-logo">NEXUS CARGO</div>
+        <p>東京都23区対応<br>単身ミニ引越しサービス</p>
+      </div>
+      <div class="foot-links">
+        <a href="#plans">料金プラン</a>
+        <a href="#booking">ダンボール予約</a>
+        <a href="#area">対応エリア</a>
+        <a href="#legal">事業概要</a>
+        <a href="https://lin.ee/wNdTgf5" target="_blank" rel="noopener">公式LINE</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 NEXUS CARGO JAPAN</span>
+      <button class="admin-link" id="openAdmin">管理者設定</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILE STICKY BAR ================= -->
+<div class="mobile-bar" id="mobileBar">
+  <div class="txt"><b>LINEで簡単予約</b><span>最短即日ご案内</span></div>
+  <a class="btn btn-primary" href="https://lin.ee/wNdTgf5" target="_blank" rel="noopener">開く</a>
+</div>
+
+<!-- ================= ADMIN MODAL ================= -->
+<div class="modal-bg" id="adminModalBg">
+  <div class="modal">
+    <button class="modal-close" id="closeAdmin" aria-label="閉じる">✕</button>
+    <div id="adminLoginView">
+      <h3>管理者ログイン</h3>
+      <p class="sub">ダンボール配送の予約受付日を設定します。</p>
+      <div class="field"><label>パスコード</label><input type="password" id="adminPass" placeholder="••••••"></div>
+      <button class="btn btn-primary" style="width:100%;" id="adminLoginBtn">ログイン</button>
+      <div id="adminLoginMsg"></div>
+      <p class="sub" style="margin-top:16px;">※ このパネルはブラウザ内での簡易設定です。複数端末・複数スタッフで共有する場合は、サーバー連携（データベース化）の実装をおすすめします。ご希望であればご相談ください。</p>
+    </div>
+    <div id="adminSettingsView" style="display:none;">
+      <h3>予約受付設定</h3>
+      <p class="sub">日付ごとに受付の可否・時間帯・置き配可否を設定できます。設定は自動保存されます。</p>
+      <div id="adminDayList"></div>
+      <button class="btn btn-secondary" style="width:100%;margin-top:18px;" id="adminLogout">ログアウト</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============ CONFIG ============ */
+  var ADMIN_PASSCODE = "nexus2026"; // 簡易パスコード（本番運用時は要変更・要サーバー化）
+  var SLOT_OPTIONS = ["9:00-12:00","13:00-16:00","17:00-20:00"];
+  var STORAGE_KEY = "nexus_cargo_availability_v1";
+  var DAYS_AHEAD = 45;
+
+  var dow = ["日","月","火","水","木","金","土"];
+
+  /* ============ DATA LAYER (localStorage) ============ */
+  function pad(n){ return n<10 ? "0"+n : ""+n; }
+  function dateKey(d){ return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+
+  function defaultConfigFor(d){
+    var day = d.getDay();
+    var isWeekend = (day===0 || day===6);
+    return { open: !isWeekend, slots: isWeekend ? [] : SLOT_OPTIONS.slice(0,2), okuraki: true };
+  }
+
+  function loadAvailability(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    }catch(e){ return {}; }
+  }
+  function saveAvailability(data){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }catch(e){}
+  }
+
+  var availability = loadAvailability();
+
+  function getConfig(d){
+    var key = dateKey(d);
+    if(availability[key]) return availability[key];
+    return defaultConfigFor(d);
+  }
+  function setConfig(d, cfg){
+    availability[dateKey(d)] = cfg;
+    saveAvailability(availability);
+  }
+
+  /* ============ BOOKING CALENDAR ============ */
+  var today = new Date(); today.setHours(0,0,0,0);
+  var viewDate = new Date(today.getFullYear(), today.getMonth(), 1);
+  var maxDate = new Date(today); maxDate.setDate(maxDate.getDate() + DAYS_AHEAD);
+
+  var selection = { date:null, slot:null, oku:null };
+
+  var bkDow = document.getElementById("bkDow");
+  dow.forEach(function(d){
+    var el = document.createElement("div");
+    el.className = "bk-dow"; el.textContent = d;
+    bkDow.appendChild(el);
+  });
+
+  var bkGrid = document.getElementById("bkGrid");
+  var bkMonthLabel = document.getElementById("bkMonthLabel");
+  var bkPrev = document.getElementById("bkPrev");
+  var bkNext = document.getElementById("bkNext");
+
+  function renderCalendar(){
+    bkGrid.innerHTML = "";
+    bkMonthLabel.textContent = viewDate.getFullYear() + "年" + (viewDate.getMonth()+1) + "月";
+
+    var firstDay = new Date(viewDate.getFullYear(), viewDate.getMonth(), 1);
+    var startOffset = firstDay.getDay();
+    var daysInMonth = new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 0).getDate();
+
+    for(var i=0;i<startOffset;i++){
+      var empty = document.createElement("div");
+      empty.className = "bk-day empty";
+      bkGrid.appendChild(empty);
+    }
+
+    for(var day=1; day<=daysInMonth; day++){
+      var d = new Date(viewDate.getFullYear(), viewDate.getMonth(), day);
+      var el = document.createElement("div");
+      el.className = "bk-day";
+      el.textContent = day;
+
+      var isPast = d < today;
+      var isTooFar = d > maxDate;
+
+      if(isPast || isTooFar){
+        el.classList.add("past");
+      } else {
+        var cfg = getConfig(d);
+        if(cfg.open && cfg.slots && cfg.slots.length>0){
+          el.classList.add("open");
+          el.setAttribute("role","button");
+          el.setAttribute("tabindex","0");
+          el.setAttribute("aria-label", (viewDate.getMonth()+1)+"月"+day+"日 予約可能");
+          (function(dd, elx){
+            elx.addEventListener("click", function(){ selectDate(dd, elx); });
+            elx.addEventListener("keydown", function(e){ if(e.key==="Enter") selectDate(dd, elx); });
+          })(d, el);
+        }
+        if(selection.date && dateKey(selection.date)===dateKey(d)){
+          el.classList.add("selected");
+        }
+      }
+      bkGrid.appendChild(el);
+    }
+
+    bkPrev.disabled = (viewDate.getFullYear()===today.getFullYear() && viewDate.getMonth()===today.getMonth());
+    var nextCheck = new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 1);
+    bkNext.disabled = nextCheck > maxDate;
+  }
+
+  bkPrev.addEventListener("click", function(){
+    viewDate.setMonth(viewDate.getMonth()-1);
+    renderCalendar();
+  });
+  bkNext.addEventListener("click", function(){
+    viewDate.setMonth(viewDate.getMonth()+1);
+    renderCalendar();
+  });
+
+  var bkSlotArea = document.getElementById("bkSlotArea");
+  var bkSlots = document.getElementById("bkSlots");
+  var bkOkuArea = document.getElementById("bkOkuArea");
+  var bkSummary = document.getElementById("bkSummary");
+  var bkActions = document.getElementById("bkActions");
+
+  function fmtDate(d){
+    return d.getFullYear()+"年"+(d.getMonth()+1)+"月"+d.getDate()+"日（"+dow[d.getDay()]+"）";
+  }
+
+  function selectDate(d, el){
+    selection.date = d; selection.slot = null; selection.oku = null;
+    renderCalendar();
+    renderSlots();
+    bkOkuArea.style.display = "none";
+    bkSummary.style.display = "none";
+    bkActions.style.display = "none";
+    updateSteps(2);
+    bkSlotArea.style.display = "block";
+    bkSlotArea.scrollIntoView({behavior:"smooth", block:"nearest"});
+  }
+
+  function renderSlots(){
+    var cfg = getConfig(selection.date);
+    bkSlots.innerHTML = "";
+    if(!cfg.slots || cfg.slots.length===0){
+      var e = document.createElement("div");
+      e.className = "bk-empty";
+      e.textContent = "この日は受付可能な時間帯がありません。別の日をお選びください。";
+      bkSlots.appendChild(e);
+      return;
+    }
+    cfg.slots.forEach(function(s){
+      var btn = document.createElement("button");
+      btn.className = "bk-slot";
+      btn.textContent = s;
+      btn.addEventListener("click", function(){
+        selection.slot = s;
+        Array.prototype.forEach.call(bkSlots.children, function(c){ c.classList.remove("selected"); });
+        btn.classList.add("selected");
+        if(cfg.okuraki){
+          bkOkuArea.style.display = "block";
+          updateSteps(3);
+          bkOkuArea.scrollIntoView({behavior:"smooth", block:"nearest"});
+        } else {
+          selection.oku = "対応エリア外のため対面受け取りのみ";
+          finalizeSelection();
+        }
+      });
+      bkSlots.appendChild(btn);
+    });
+  }
+
+  var okuButtons = document.querySelectorAll(".bk-toggle[data-oku]");
+  okuButtons.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      okuButtons.forEach(function(b){ b.classList.remove("selected"); });
+      btn.classList.add("selected");
+      selection.oku = btn.getAttribute("data-oku")==="yes" ? "希望する（玄関前などへ置き配）" : "希望しない（対面で受け取る）";
+      finalizeSelection();
+    });
+  });
+
+  function finalizeSelection(){
+    document.getElementById("sumDate").textContent = fmtDate(selection.date);
+    document.getElementById("sumSlot").textContent = selection.slot;
+    document.getElementById("sumOku").textContent = selection.oku;
+    bkSummary.style.display = "block";
+    bkActions.style.display = "flex";
+    updateSteps(4);
+    bkSummary.scrollIntoView({behavior:"smooth", block:"nearest"});
+
+    var msg = "【ダンボール配送予約】\n配送希望日：" + fmtDate(selection.date) +
+      "\n時間帯：" + selection.slot + "\n置き配：" + selection.oku +
+      "\n\n※引越し希望日・出発地・到着地もあわせてお知らせください。";
+
+    var lineBtn = document.getElementById("bkLineBtn");
+    lineBtn.addEventListener("click", function(){
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(msg).catch(function(){});
+      }
+    });
+  }
+
+  document.getElementById("bkReset").addEventListener("click", function(){
+    selection = { date:null, slot:null, oku:null };
+    bkSlotArea.style.display = "none";
+    bkOkuArea.style.display = "none";
+    bkSummary.style.display = "none";
+    bkActions.style.display = "none";
+    okuButtons.forEach(function(b){ b.classList.remove("selected"); });
+    updateSteps(1);
+    renderCalendar();
+    window.scrollTo({top: document.getElementById("booking").offsetTop - 80, behavior:"smooth"});
+  });
+
+  function updateSteps(n){
+    document.querySelectorAll(".bk-step").forEach(function(el){
+      var s = parseInt(el.getAttribute("data-step"),10);
+      el.classList.remove("active","done");
+      if(s < n) el.classList.add("done");
+      if(s === n) el.classList.add("active");
+    });
+  }
+
+  renderCalendar();
+  updateSteps(1);
+
+  /* ============ IN-PAGE ANCHOR SMOOTH SCROLL (robust, nav-offset aware) ============ */
+  var navEl = document.querySelector(".nav");
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener("click", function(e){
+      var id = link.getAttribute("href").slice(1);
+      var target = id ? document.getElementById(id) : null;
+      if(!target) return;
+      e.preventDefault();
+      var navH = navEl ? navEl.offsetHeight : 0;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - navH - 16;
+      window.scrollTo({ top: top, behavior: "smooth" });
+      history.pushState(null, "", "#" + id);
+    });
+  });
+
+  /* ============ MOBILE STICKY BAR ============ */
+  var mobileBar = document.getElementById("mobileBar");
+  var heroEl = document.querySelector(".hero");
+  function onScroll(){
+    if(window.innerWidth > 720) return;
+    var trigger = heroEl.offsetTop + heroEl.offsetHeight;
+    if(window.scrollY > trigger){ mobileBar.classList.add("show"); }
+    else{ mobileBar.classList.remove("show"); }
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  window.addEventListener("resize", onScroll);
+  onScroll();
+
+  /* ============ LEGAL TABS ============ */
+  var legalBtns = document.querySelectorAll(".legal-nav button");
+  legalBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      legalBtns.forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+      document.querySelectorAll(".legal-panel").forEach(function(p){ p.classList.remove("active"); });
+      document.getElementById("panel-"+btn.getAttribute("data-panel")).classList.add("active");
+    });
+  });
+
+  /* ============ ADMIN MODAL ============ */
+  var adminModalBg = document.getElementById("adminModalBg");
+  var adminLoginView = document.getElementById("adminLoginView");
+  var adminSettingsView = document.getElementById("adminSettingsView");
+  var isAdminLoggedIn = false;
+
+  document.getElementById("openAdmin").addEventListener("click", function(){
+    adminModalBg.classList.add("show");
+  });
+  document.getElementById("closeAdmin").addEventListener("click", function(){
+    adminModalBg.classList.remove("show");
+  });
+  adminModalBg.addEventListener("click", function(e){
+    if(e.target === adminModalBg) adminModalBg.classList.remove("show");
+  });
+
+  document.getElementById("adminLoginBtn").addEventListener("click", function(){
+    var val = document.getElementById("adminPass").value;
+    var msgEl = document.getElementById("adminLoginMsg");
+    if(val === ADMIN_PASSCODE){
+      isAdminLoggedIn = true;
+      adminLoginView.style.display = "none";
+      adminSettingsView.style.display = "block";
+      msgEl.innerHTML = "";
+      renderAdminDayList();
+    } else {
+      msgEl.innerHTML = '<div class="msg err">パスコードが違います。</div>';
+    }
+  });
+
+  document.getElementById("adminLogout").addEventListener("click", function(){
+    isAdminLoggedIn = false;
+    adminSettingsView.style.display = "none";
+    adminLoginView.style.display = "block";
+    document.getElementById("adminPass").value = "";
+  });
+
+  function renderAdminDayList(){
+    var listEl = document.getElementById("adminDayList");
+    listEl.innerHTML = "";
+    for(var i=0;i<DAYS_AHEAD;i++){
+      var d = new Date(today); d.setDate(d.getDate()+i);
+      var cfg = getConfig(d);
+      var row = document.createElement("div");
+      row.className = "admin-day-row";
+
+      var label = document.createElement("div");
+      label.className = "d";
+      label.textContent = (d.getMonth()+1)+"/"+d.getDate()+"("+dow[d.getDay()]+")";
+      row.appendChild(label);
+
+      var sw = document.createElement("label");
+      sw.className = "switch";
+      var inp = document.createElement("input");
+      inp.type = "checkbox";
+      inp.checked = !!cfg.open;
+      var slider = document.createElement("span");
+      slider.className = "slider";
+      sw.appendChild(inp); sw.appendChild(slider);
+      row.appendChild(sw);
+
+      var chipsWrap = document.createElement("div");
+      chipsWrap.className = "admin-slot-chips";
+      SLOT_OPTIONS.forEach(function(slot){
+        var chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "admin-slot-chip" + (cfg.slots && cfg.slots.indexOf(slot)>-1 ? " on" : "");
+        chip.textContent = slot;
+        chip.addEventListener("click", function(){
+          var current = getConfig(d);
+          var slots = current.slots ? current.slots.slice() : [];
+          var idx = slots.indexOf(slot);
+          if(idx>-1){ slots.splice(idx,1); } else { slots.push(slot); }
+          setConfig(d, { open: current.open, slots: slots, okuraki: current.okuraki });
+          chip.classList.toggle("on");
+        });
+        chipsWrap.appendChild(chip);
+      });
+      row.appendChild(chipsWrap);
+
+      var okuLabel = document.createElement("label");
+      okuLabel.className = "switch";
+      okuLabel.title = "置き配可否";
+      var okuInp = document.createElement("input");
+      okuInp.type = "checkbox";
+      okuInp.checked = !!cfg.okuraki;
+      var okuSlider = document.createElement("span");
+      okuSlider.className = "slider";
+      okuLabel.appendChild(okuInp); okuLabel.appendChild(okuSlider);
+      var okuText = document.createElement("span");
+      okuText.className = "admin-okuraki";
+      okuText.textContent = "置き配可";
+      row.appendChild(okuText);
+      row.appendChild(okuLabel);
+
+      inp.addEventListener("change", function(dd, chkbox){
+        return function(){
+          var current = getConfig(dd);
+          setConfig(dd, { open: chkbox.checked, slots: current.slots, okuraki: current.okuraki });
+        };
+      }(d, inp));
+
+      okuInp.addEventListener("change", function(dd, chkbox){
+        return function(){
+          var current = getConfig(dd);
+          setConfig(dd, { open: current.open, slots: current.slots, okuraki: chkbox.checked });
+        };
+      }(d, okuInp));
+
+      listEl.appendChild(row);
+    }
+  }
+
+  /* re-render booking calendar if admin settings changed while open */
+  document.getElementById("closeAdmin").addEventListener("click", function(){
+    renderCalendar();
+  });
+  adminModalBg.addEventListener("click", function(e){
+    if(e.target === adminModalBg) renderCalendar();
+  });
+
+})();
+</script>
+</body>
+</html>
