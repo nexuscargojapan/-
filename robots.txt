@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nexuscargojapan.github.io/NEXUS-CARGO-JAPAN/sitemap.xml
